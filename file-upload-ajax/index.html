@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload with Ajax Jquery and PHP</title>
+<style>
+.container{
+    width: 400px;
+    height: 108px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    background-color: #8C52FF;
+    padding: 30px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+form{
+    display: none;
+}
+button{
+    background-color: white;
+    border: 0px;
+    width: 130px;
+    padding: 10px 40px;
+    border-radius: 3px;
+    color: #8C52FF;
+    cursor: pointer;
+}
+.progress{
+    background-color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 7px;
+    border-radius: 3px;
+    padding: 4px;
+}
+.progress-bar{
+    width: 0%;
+    height: 100%;
+    background-color: #8C52FF;
+    border-radius: 3px;
+}
+span{
+    width: 130px;
+    line-height: 35px;
+    border-radius: 3px;
+    position: relative;
+    top: 1px;
+    text-align: center;
+    display: inline-block;
+    background-color: white;
+    color: #8C52FF;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <form id="form" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+    </form>
+    <button id="upload">Upload</button>
+    <span id="percent">0%</span>
+    <button id="cancel" disabled>Cancel</button>
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+    <span id="dataTransferred">Loaded/Total</span>
+    <span id="Mbps">Mbps</span>
+    <span id="timeLeft">Time Left</span>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
